@@ -1,0 +1,1292 @@
+/*---------- General Styles ----------*/
+
+* {
+   scroll-behavior: smooth;
+}
+
+::selection {
+   background-color: rgba(25, 139, 204, 0.5);
+   color: #fff;
+}
+
+body {
+   font-family: "Roboto", Arial, sans-serif;
+   color: #444;
+   overflow-x: hidden;
+}
+
+a,
+button {
+   cursor: pointer;
+}
+
+table th,
+table td {
+   border-radius: 0;
+   text-align: center;
+}
+
+table th.left-align,
+table td.left-align {
+   text-align: left;
+}
+
+.page-notice h4,
+.page-notice i {
+   margin-top: 0;
+   font-size: 5rem;
+   color: #198ccd;
+}
+
+.page-notice i.star {
+   color: #f1c40f;
+}
+
+.page-notice p {
+   margin: 0;
+   font-size: 1.2rem;
+}
+
+.page-notice a {
+   color: #198ccd;
+}
+
+.page-notice a:hover {
+   text-decoration: underline;
+}
+
+.toast {
+   font-size: 1rem;
+}
+
+.toast .toast-action {
+   color: #f1c40f;
+   font-weight: bold;
+}
+
+.swal-modal {
+   z-index: 30000;
+}
+
+.swal-overlay {
+   z-index: 25000;
+}
+
+.swal-modal .swal-text {
+   text-align: center;
+}
+
+.swal-modal .swal-button {
+   transition: transform 0.3s;
+}
+
+.swal-modal .swal-button:hover {
+   transform: scale(1.04);
+}
+
+.swal-modal .swal-button:focus {
+   box-shadow: none;
+}
+
+.swal-modal .cancel-delete,
+.swal-modal .cancel-delete:focus {
+   background-color: #e8e8e8;
+}
+
+.swal-modal .confirm-delete:focus {
+   background-color: #df4740;
+}
+
+.material-icons {
+   cursor: default;
+}
+
+/*---------- Loading Styles ----------*/
+
+.loading-ajax {
+   margin: 0;
+   padding: 1rem 0;
+   color: #9e9e9e;
+   text-align: center;
+}
+
+.loading-ajax span span {
+   display: inline-block;
+   margin-right: 10px;
+}
+
+.loading-ajax span span:after {
+   content: "";
+   display: block;
+   width: 14px;
+   height: 14px;
+   border-radius: 50%;
+   border: 2px solid #9e9e9e;
+   border-color: #9e9e9e #9e9e9e transparent transparent;
+   animation: loader 0.5s linear infinite;
+}
+
+@keyframes loader {
+   from {
+      transform: rotate(0deg);
+   }
+   to {
+      transform: rotate(360deg);
+   }
+}
+
+@media (min-width: 1201px) {
+   .loading-ajax span span:after {
+      width: 15px;
+      height: 15px;
+   }
+}
+
+@media (min-width: 993px) {
+   .loading-ajax span span:after {
+      width: 14.5px;
+      height: 14.5px;
+   }
+}
+
+/*---------- Header Styles ----------*/
+
+/*----- Desktop Header -----*/
+
+#nav-top {
+   background: none;
+   height: 2.5rem;
+   box-shadow: none;
+   color: #8d8d8d;
+   font-family: "Roboto", Arial, sans-serif;
+   font-size: 0.8rem;
+   text-transform: uppercase;
+   line-height: 2.5rem;
+   border-bottom: 1px solid #dbdbdb;
+}
+
+#nav-top a {
+   padding: 0 5px;
+   color: #8d8d8d;
+   font-size: 0.8rem;
+   transition: color 0.3s;
+}
+
+#nav-top a:hover {
+   background: none;
+   color: #444;
+}
+
+#nav-top #favorite-btn {
+   display: inline;
+   padding: 7px;
+   border-radius: 5px;
+   margin-left: 5px;
+   background-color: #ef8704;
+   color: #fff;
+   transition: box-shadow 0.3s;
+}
+
+#nav-top #favorite-btn:hover {
+   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+#logo-title {
+   padding: 2rem 0 1.5rem 0;
+}
+
+#logo-title h1 {
+   margin: 0;
+}
+
+#logo-title img {
+   height: 7rem;
+}
+
+#nav-bottom {
+   background-color: #198ccd;
+   overflow-x: auto;
+   height: 3rem;
+   box-shadow: none;
+   text-transform: uppercase;
+   font-family: "Source Sans Pro", Arial, sans-serif;
+   font-weight: bold;
+   line-height: 3rem;
+}
+
+/*----- Mobile Header -----*/
+
+#mobile-header nav {
+   background-color: #fff;
+   color: #198ccd;
+   box-shadow: none;
+   border-bottom: 2px solid #198ccd;
+}
+
+#mobile-header nav a.sidenav-trigger,
+#mobile-header nav a.link-button-mobile {
+   margin: 0;
+   padding: 0 18px;
+}
+
+#mobile-header nav a.link-button-mobile {
+   position: relative;
+   float: left;
+   z-index: 1;
+   height: 56px;
+}
+
+#mobile-header nav a.link-button-mobile::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   border-radius: 50%;
+   opacity: 0;
+   transform: scale(0);
+   transition: 0.3s;
+}
+
+#mobile-header nav a.link-button-mobile:hover::before {
+   opacity: 1;
+   transform: scale(1);
+   background-color: rgba(224, 224, 224, 0.5);
+}
+
+#mobile-header nav i {
+   color: #198ccd;
+}
+
+#mobile-header nav .brand-logo {
+   font-size: 2.5rem;
+}
+
+#mobile-header nav h1 {
+   margin: 0;
+   line-height: 100%;
+}
+
+#mobile-header nav img {
+   height: 2rem;
+}
+
+#mobile-header .sidenav {
+   z-index: 20000;
+}
+
+.sidenav-overlay {
+   z-index: 19000;
+}
+
+#mobile-header .sidenav img {
+   width: 100%;
+}
+
+#mobile-header .sidenav li a {
+   padding: 0 1.5rem;
+}
+
+#mobile-header > .sidenav li > a > i {
+   margin-right: 1rem;
+}
+
+#mobile-header .sidenav li:first-child {
+   line-height: 0;
+}
+
+#mobile-header .sidenav li:last-child {
+   position: absolute;
+   width: 100%;
+   bottom: 4.32rem;
+   border-top: 1px solid #dbdbdb;
+}
+
+#mobile-header .sidenav li .divider {
+   margin: 4px 0;
+}
+
+@media (max-width: 300px) {
+   #mobile-header .sidenav {
+      width: 100%;
+   }
+}
+
+/*---------- Main Styles ----------*/
+
+main {
+   padding: 3rem 0;
+   min-height: 70vh;
+}
+
+.top-title {
+   margin: 0 0 3rem 0;
+   text-align: center;
+   font-family: "Source Sans Pro", Arial, sans-serif;
+   font-size: 2rem;
+}
+
+.top-title span {
+   padding-bottom: 0.5rem;
+   border-bottom: 3px solid #198ccd;
+}
+
+.full-page h2 {
+   display: inline-block;
+   position: relative;
+   padding: 0.5rem 2.5rem 0.5rem 1rem;
+   background-color: #198ccd;
+   color: #fff;
+   font-family: "Source Sans Pro", Arial, sans-serif;
+   font-size: 1.3rem;
+   margin: 0 0 1rem 0;
+}
+
+.full-page h2::after {
+   content: "";
+   display: block;
+   position: absolute;
+   top: 0;
+   right: 0;
+   height: 0;
+   width: 0;
+   border-left: 1.25rem solid transparent;
+   border-top: 1.25rem solid transparent;
+   border-right: 1.25rem solid #fff;
+   border-bottom: 1.25rem solid #fff;
+}
+
+#about img {
+   display: block;
+   margin: 0 auto 2rem auto;
+   height: 5rem;
+}
+
+#about a {
+   color: #198ccd;
+   font-weight: bold;
+}
+
+#about p:last-of-type {
+   margin-bottom: 0;
+}
+
+#contact .input-field input:focus + label,
+#contact .input-field textarea:focus + label {
+   color: #198ccd;
+}
+
+#contact .input-field input:focus,
+#contact .input-field textarea:focus {
+   border-bottom: 1px solid #198ccd;
+}
+
+#contact button {
+   background-color: #198ccd;
+}
+
+@media (max-width: 600px) {
+   main {
+      padding-bottom: 5rem;
+   }
+}
+
+/*----- Matchday -----*/
+
+#matchday .matchday {
+   margin-bottom: 1.5rem;
+}
+
+#matchday .matchday-header {
+   position: relative;
+}
+
+#matchday .matchday-header::before {
+   content: "";
+   position: absolute;
+   right: 0;
+   top: 50%;
+   transform: translateY(-50%);
+   height: 3px;
+   width: 100%;
+   background-color: #dbdbdb;
+}
+
+#matchday .matchday-header h3 {
+   display: inline-block;
+   position: relative;
+   margin: 0;
+   padding: 0.5rem 1rem 0.5rem 0;
+   text-transform: uppercase;
+   font-size: 1rem;
+   font-weight: bold;
+   background-color: #fff;
+}
+
+#home-matchday {
+   margin-bottom: 2rem;
+}
+
+#home-matchday-header h2 {
+   display: inline-block;
+   padding: 0.5rem 0 0.5rem 0.5rem;
+   line-height: 100%;
+   font-family: "Source Sans Pro", Arial, sans-serif;
+   font-size: 1.5rem;
+   border-left: 3px solid #198ccd;
+   font-weight: bold;
+   margin: 0;
+}
+
+.matchday-content {
+   margin: 1rem 0 0 0;
+}
+
+.matchday-content.row > div {
+   padding: 0;
+}
+
+.matchday-content > div:first-child .match {
+   border-right: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.matchday-content .match {
+   padding: 1rem;
+   margin: 0;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.matchday-content .match:last-child {
+   border-bottom: none;
+}
+
+.matchday-content .match[data-winner="HOME_TEAM"] .home,
+.matchday-content .match[data-winner="AWAY_TEAM"] .away {
+   font-weight: bold;
+}
+
+.matchday-content .match[data-winner="HOME_TEAM"] .home::after,
+.matchday-content .match[data-winner="AWAY_TEAM"] .away::after {
+   content: "";
+   position: absolute;
+   top: 50%;
+   right: -1rem;
+   transform: translateY(-50%);
+   height: 0;
+   width: 0;
+   border-right: 0.4rem solid #444;
+   border-top: 0.4rem solid transparent;
+   border-bottom: 0.4rem solid transparent;
+}
+
+.matchday-content .match .full-time-score[data-score="null"] {
+   display: none;
+}
+
+.matchday-content .match .status {
+   display: block;
+}
+
+.matchday-content .match[data-status="FINISHED"] .status {
+   color: #198ccd;
+   font-weight: bold;
+}
+
+.matchday-content .match[data-status="LIVE"] .status,
+.matchday-content .match[data-status="IN_PLAY"] .status,
+.matchday-content .match[data-status="PAUSED"] .status {
+   color: #2ecc71;
+   font-weight: bold;
+}
+
+.matchday-content .match[data-status="POSTPONED"] .status,
+.matchday-content .match[data-status="SUSPENDED"] .status,
+.matchday-content .match[data-status="CANCELED"] .status {
+   color: #e74c3c;
+   font-weight: bold;
+}
+
+.matchday-content .team-match {
+   padding: 0 1rem 0 0;
+   border-right: 1px solid #eee;
+}
+
+.matchday-content .team-match > div {
+   position: relative;
+}
+
+.matchday-content .team-match .home {
+   margin-bottom: 1rem;
+}
+
+.matchday-content .team-match img {
+   width: 1.5rem;
+   height: 1.5rem;
+   object-fit: contain;
+   margin-right: 10px;
+}
+
+.matchday-content .match .date {
+   padding: 0.5rem 0 0 0;
+   height: 100%;
+}
+
+@media (max-width: 650px) and (min-width: 601px) {
+   .matchday-content .team-match img {
+      width: 1.3rem;
+      height: 1.3rem;
+      margin-right: 5px;
+   }
+   .matchday-content .team-match,
+   .matchday-content .date {
+      font-size: 0.8rem;
+   }
+}
+
+@media (max-width: 600px) {
+   #home-matchday-header h2 {
+      display: flex;
+      align-items: center;
+      padding: 0 0 1rem 0;
+      border-left: none;
+      border-bottom: 3px solid #198ccd;
+   }
+   #home-matchday-header h2 i {
+      margin-right: 5px;
+   }
+   #home-matchday-header .current-matchday {
+      margin-left: 0.3rem;
+   }
+   .matchday-content > div:first-child .match {
+      border-right: none;
+   }
+   .matchday-content > div:first-child .match:last-child {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+   }
+}
+
+/*----- Content -----*/
+
+/*- Featured Content -*/
+
+#standings.featured-standings {
+   padding: 0 1rem 0 0;
+}
+
+#standings td[data-gd="plus"] {
+   color: #2ecc71;
+}
+
+#standings td[data-gd="minus"] {
+   color: #e74c3c;
+}
+
+#scorers.featured-scorers {
+   padding: 0 0 0 1rem;
+}
+
+.featured-header {
+   position: relative;
+}
+
+.featured-header::before {
+   z-index: -1;
+   content: "";
+   position: absolute;
+   height: 0.2rem;
+   width: 100%;
+   top: 50%;
+   transform: translateY(-50%);
+   right: 0;
+   background-color: #198ccd;
+}
+
+.featured-header h2 {
+   position: relative;
+   left: 1.5rem;
+   display: inline-block;
+   margin: 0;
+   font-size: 1.2rem;
+   padding: 0.5rem 1rem;
+   background-color: #fff;
+   text-transform: uppercase;
+   font-weight: bold;
+   color: #198ccd;
+}
+
+.featured-content {
+   margin-bottom: 1rem;
+   overflow-x: auto;
+}
+
+.full-content table a,
+.featured-content table a {
+   color: #198ccd;
+}
+
+.full-content table img,
+.featured-content table img {
+   width: 1.5rem;
+   height: 1.5rem;
+   object-fit: contain;
+   margin-right: 10px;
+}
+
+.featured-footer a {
+   display: block;
+   width: 100%;
+   padding: 0.3rem;
+   border-radius: 5px;
+   background-color: #198ccd;
+   color: #fff;
+   text-align: center;
+   transition: transform 0.5s, box-shadow 0.5s;
+}
+
+.featured-footer a:hover {
+   transform: scale(1.01);
+   box-shadow: 0 5px 10px rgba(25, 140, 205 , 0.3);
+}
+
+@media (max-width: 992px) {
+   .full-content table img,
+   .featured-content table img {
+      margin-right: 5px;
+   }
+}
+
+@media (max-width: 600px) {
+   #standings.featured-standings,
+   #scorers.featured-scorers {
+      padding: 0;
+   }
+   #standings.featured-standings {
+      margin-bottom: 2rem;
+   }
+}
+
+/*- Full Content -*/
+
+.full-content-table {
+   padding: 0;
+}
+
+.full-content table {
+   position: relative;
+}
+
+.full-content table thead tr {
+   border-bottom: none;
+}
+
+.full-content table th {
+   position: sticky;
+   top: 0;
+   background-color: #fff;
+   box-shadow: 0 2px rgba(0, 0, 0, 0.12)
+}
+
+#standings.full-content tbody tr:nth-child(n+1):nth-child(-n+4) {
+   background-color: rgba(155, 89, 182, 0.1);
+}
+
+#standings.full-content tbody tr:nth-child(5) {
+   background-color: rgba(52, 152, 219, 0.1);
+}
+
+#standings.full-content tbody tr:nth-child(6) {
+   background-color: rgba(241, 196, 15, 0.1);
+}
+
+#standings.full-content tbody tr:nth-child(n+18):nth-child(-n+20) {
+   background-color: rgba(231, 76, 60, 0.1);
+}
+
+.full-content #info {
+   margin: 1rem 0 0 0;
+}
+
+.full-content #info div {
+   margin: 0;
+   font-size: 0.9rem;
+   line-height: 2;
+   color: #999;
+}
+
+.full-content #info div:first-child {
+   margin-bottom: 1rem;
+}
+
+.full-content #info div p {
+   margin: 0;
+}
+
+.full-content #info div span {
+   padding-right: 1rem;
+}
+
+.full-content #info div span:last-child {
+   padding-right: 0;
+}
+
+@media (max-width: 600px) {
+   .full-content-table {
+      overflow-x: auto;
+   }
+}
+
+/*---------- Club Styles ----------*/
+
+#mobile-header.club-details .nav-wrapper {
+   display: flex;
+   align-items: center;
+}
+
+#mobile-header.club-details nav h1 {
+   display: inline-block;
+   font-size: 1.5rem;
+   width: 70%;
+   margin-left: 0.5rem;
+   color: #444;
+}
+
+#mobile-header.club-details .favorite-container {
+   position: absolute;
+   right: 1.5rem;
+   cursor: pointer;
+}
+
+#mobile-header.club-details .favorite-button {
+   color: #f1c40f;
+}
+
+#mobile-header.club-details .delete-favorite-button {
+   color: #198ccd;
+}
+
+#clubs h2 {
+   margin-bottom: 1.5rem;
+}
+
+#clubs > div {
+   margin: 0;
+}
+
+#clubs .club {
+   padding: 0 0.5rem;
+}
+
+#clubs .club a {
+   display: block;
+   height: 100%;
+   margin-bottom: 1rem;
+   color: #444;
+   border: 1px solid #dbdbdb;
+   transition: 0.3s;
+}
+
+#clubs .club a:hover {
+   transform: scale(1.025);
+   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+#clubs .club:nth-child(n+19):nth-child(-n+20) a {
+   margin-bottom: 0;
+}
+
+#clubs.favorite .club:nth-child(n+19):nth-child(-n+20) a {
+   margin-bottom: 1rem;
+}
+
+#clubs .club img {
+   display: block;
+   object-fit: contain;
+   height: 10rem;
+   width: 100%;
+   padding: 0.5rem;
+   margin: 0 auto;
+}
+
+#clubs .club span {
+   display: block;
+   padding: 0.5rem 0.5rem 0 0.5rem;
+   margin-bottom: 0.5rem;
+   border-top: 1px solid #dbdbdb;
+}
+
+#club-details h2 {
+   margin-bottom: 2rem;
+}
+
+#club-details .detail-club {
+   padding: 0 0 2rem 0;
+   box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+#club-details .detail-image {
+   padding-left: 0;
+}
+
+#club-details .detail-info {
+   padding-right: 0;
+}
+
+#club-details img {
+   display: block;
+   object-fit: contain;
+   height: 12rem;
+   width: 100%;
+   margin: 0 auto;
+}
+
+#club-details .detail-info div:first-of-type {
+   padding-left: 0;
+}
+
+#club-details .detail-info div:last-of-type {
+   padding-right: 0;
+}
+
+#club-details h3 {
+   margin-top: 0;
+   font-family: "Source Sans Pro", Arial, sans-serif;
+}
+
+#club-details .favorite-container {
+   margin-left: 1rem;
+}
+
+#club-details .favorite-button {
+   color: #f1c40f;
+}
+
+#club-details .favorite-click {
+   display: inline-block;
+   cursor: pointer;
+}
+
+#club-details .favorite-click:hover {
+   animation: favorite 0.75s;
+}
+
+@keyframes favorite {
+   0% {
+      transform: translateY(0);
+   }
+   50% {
+      transform: translateY(-5px);
+   }
+   100% {
+      transform: translateY(0);
+   }
+}
+
+#club-details .delete-click {
+   color: #e74c3c;
+   cursor: pointer;
+}
+
+#club-details p {
+   margin-top: 0;
+}
+
+#club-details p:last-child {
+   margin-bottom: 0;
+}
+
+#club-details p.detail-info-title {
+   margin: 0;
+   font-weight: bold;
+   text-transform: uppercase;
+}
+
+#club-details a {
+   color: #198ccd;
+}
+
+#club-details a:hover {
+   text-decoration: underline;
+}
+
+#club-details .detail-squad {
+   padding: 2rem 0 0 0;
+   border-top: 1px solid #dbdbdb;
+}
+
+#club-details h4 {
+   margin-top: 0;
+   font-size: 1.5rem;
+}
+
+#club-details .detail-squad-table {
+   overflow-x: auto;
+}
+
+#club-details th,
+#club-details td {
+   text-align: left;
+}
+
+#club-details tbody tr:nth-child(odd) {
+   background-color: rgba(219, 219, 219, 0.3);
+}
+
+#club-details table .number {
+   display: inline-block;
+   width: 1.5rem;
+   padding: 2px;
+   margin-right: 5px;
+   border-radius: 50%;
+   background-color: #198ccd;
+   color: #fff;
+   text-align: center;
+   font-size: 0.8rem;
+}
+
+#club-details table tr[data-position="Goalkeeper"] .number[data-number="null"] {
+   color: #2ecc71;
+}
+
+#club-details table tr[data-position="Defender"] .number[data-number="null"] {
+   color: #3498db;
+}
+
+#club-details table tr[data-position="Midfielder"] .number[data-number="null"] {
+   color: #f39c12;
+}
+
+#club-details table tr[data-position="Attacker"] .number[data-number="null"] {
+   color: #e74c3c;
+}
+
+#club-details table tr[data-position="Goalkeeper"] .number {
+   background-color: #2ecc71;
+}
+
+#club-details table tr[data-position="Defender"] .number {
+   background-color: #3498db;
+}
+
+#club-details table tr[data-position="Midfielder"] .number {
+   background-color: #f39c12;
+}
+
+#club-details table tr[data-position="Attacker"] .number {
+   background-color: #e74c3c;
+}
+
+@media (min-width: 993px) {
+   #clubs > div > div:nth-child(19) {
+      margin-left: 33.3333333333%; /* Nilai diambil dari class offset Materialize */
+   }
+   #clubs.favorite > div > div:nth-child(19) {
+      margin-left: 0;
+   }
+}
+
+@media (max-width: 992px) and (min-width: 601px) {
+   #clubs > div > div:nth-child(19) {
+      margin-left: 16.6666666667%; /* Nilai diambil dari class offset Materialize */
+   }
+   #clubs.favorite > div > div:nth-child(19) {
+      margin-left:0;
+   }
+}
+
+@media (max-width: 600px) {
+   #club-details .detail-image {
+      padding: 0;
+   }
+   #club-details .detail-info {
+      padding: 1rem 1rem 0 1rem;
+   }
+   #club-details h3 {
+      text-align: center;
+      font-size: 2.5rem;
+   }
+   #club-details p {
+      text-align: center;
+   }
+}
+
+/*---------- Footer Styles ----------*/
+
+footer.page-footer {
+   background-color: #198ccd;
+   padding: 0;
+}
+
+footer > div.container {
+   display: flex;
+   justify-content: center;
+   padding: 2rem 0;
+}
+
+footer > div.container span {
+   margin: 0 2rem;
+   opacity: 0.5;
+}
+
+footer img {
+   height: 5rem;
+   filter: opacity(50%);
+   transition: filter 0.5s;
+}
+
+footer img:hover {
+   filter: opacity(100%);
+}
+
+footer .footer-copyright a {
+   color: #fff;
+   font-weight: bold;
+}
+
+/*---------- Bottom Tabs ----------*/
+
+#bottom-tabs {
+   z-index: 10000;
+   position: fixed;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   margin: 0;
+   background-color: #fff;
+   text-align: center;
+   box-shadow: 0 -3px 6px rgba(0, 0, 0, 0.1);
+}
+
+#bottom-tabs div {
+   padding: 0;
+}
+
+#bottom-tabs a,
+#bottom-tabs button {
+   display: inline-block;
+   width: 100%;
+   padding: 6px 0;
+   position: relative;
+   color: rgba(102, 102, 102, 0.9);
+   transition: color 0.3s;
+}
+
+#bottom-tabs a:hover,
+#bottom-tabs button:hover {
+   color: rgba(102, 102, 102, 1);
+}
+
+#bottom-tabs a::before,
+#bottom-tabs button::before {
+   content: "";
+   z-index: -5;
+   position: absolute;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   background-color: rgba(224, 224, 224, 0.5);
+   opacity: 0;
+   border-radius: 2rem;
+   transition: 0.3s;
+}
+
+#bottom-tabs a:hover::before,
+#bottom-tabs button:hover::before {
+   opacity: 1;
+}
+
+#bottom-tabs div:first-child button::before {
+   left: -50%;
+}
+
+#bottom-tabs div:nth-child(2) a::before {
+   left: 0%;
+   transform: scale(0);
+}
+
+#bottom-tabs div:last-child a::before {
+   right: -50%;
+}
+
+#bottom-tabs div:first-child button:hover::before {
+   left: -20%;
+}
+
+#bottom-tabs div:nth-child(2) a:hover::before {
+   transform: scale(1);
+}
+
+#bottom-tabs div:last-child a:hover::before {
+   right: -20%;
+}
+
+#bottom-tabs button {
+   font-family: "Roboto", Arial, sans-serif;
+   background: transparent;
+   line-height: 1.5;
+   border: none;
+   cursor: pointer;
+}
+
+#bottom-tabs i {
+   display: block;
+   font-size: 2rem;
+   margin: 0;
+}
+
+#bottom-tabs span {
+   display: block;
+   font-size: 0.8rem;
+   text-transform: uppercase;
+}
+
+/*---------- Menu List ----------*/
+
+#menu-list {
+   z-index: -10;
+   position: fixed;   
+   bottom: 5rem;
+   left: 1.5rem;
+   right: 1.5rem;
+   height: 12rem;
+   padding: 50px 10px 10px 10px;
+   margin: 0;
+   opacity: 0;
+   transform: translate(-50%, 70%) scale(0);
+   background-color: #fff;
+   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+   transition: z-index 0.5s, opacity 0.5s, transform 0.5s;   
+}
+
+#menu-list.show {
+   z-index: 15000;
+   opacity: 1;
+   transform: translate(0) scale(1);
+}
+
+#menu-list div {
+   padding: 0 10px 0 0;
+}
+
+#menu-list div:nth-of-type(2), #menu-list div:last-of-type {
+   padding: 0;
+}
+
+#menu-list div a {
+   display: flex;
+   position: relative;
+   align-items: center;
+   padding: 10px;
+   width: 100%;
+   margin-bottom: 10px;
+   font-size: 1.1rem;
+   border-radius: 5px;
+   color: #444;
+   background-color: #e0e0e0;
+   transition: background-color 0.5s, color 0.5s;
+}
+
+#menu-list div a:hover {
+   background-color: #198ccd;
+   color: #fff;
+}
+
+#menu-list div a::before {
+   content: "";
+   position: absolute;   
+   background-position: center;
+   background-size: cover;
+   right: 0;
+   top: 0;
+   width: 30%;
+   height: 100%;
+   border-top-right-radius: 5px;
+   border-bottom-right-radius: 5px;
+   filter: grayscale(100%) opacity(0.5);
+   transition: filter 0.5s;
+}
+
+#menu-list div a:hover::before {
+   filter: grayscale(0) opacity(1);
+}
+
+#menu-list div:first-of-type a::before {
+   background-image: url("../images/laliga-club.jpg");
+}
+
+#menu-list div:nth-of-type(2) a::before {
+   background-image: url("../images/laliga-match.jpg");
+}
+
+#menu-list div:nth-of-type(3) a::before {
+   background-image: url("../images/laliga-coach.jpg");
+}
+
+#menu-list div:last-of-type a::before {
+   background-image: url("../images/laliga-winner.jpg");
+}
+
+#menu-list div a::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   right: 0;
+   width: 30%;
+   height: 100%;
+   border-top-right-radius: 5px;
+   border-bottom-right-radius: 5px;
+   background: linear-gradient(to right, rgba(224, 224, 224, 1), rgba(224, 224, 224, 0));
+   transition: background 0.5s;
+}
+
+#menu-list div a:hover::after {
+   background: linear-gradient(to right, rgba(25, 140, 205, 1), rgba(25, 140, 205, 0));
+}
+
+#menu-list div a i {
+   margin-right: 5px;
+}
+
+#close-menu-list {
+   position: absolute;
+   background: transparent;
+   cursor: pointer;
+   border: none;
+   right: 10px;
+   top: 10px;
+   color: #cacaca;
+   transition: color 0.3s;
+}
+
+#close-menu-list:hover {
+   color: #444;
+}
+
+@media (max-width: 500px) {
+   #menu-list {
+      left: 10px;
+      right: 10px;
+   }
+   #menu-list div a {
+      font-size: 0.85rem;
+   }
+   #menu-list div a i {
+      margin-right: 3px;
+   }
+}
+
+@media (max-width: 350px) {
+   #menu-list {
+      height: 20rem;
+   }
+   #menu-list div {
+      width: 100%;
+      padding: 0;
+   }
+   #menu-list div a {
+      font-size: 1rem;
+   }
+   #menu-list div a i {
+      margin-right: 10px;
+   }
+}

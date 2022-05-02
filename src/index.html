@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="El Futbol ID menyediakan informasi lengkap seputar sepak bola Liga Spanyol">
+      <meta name="keyword" content="el futbol id, futbol, laliga, liga spanyol, sepak bola, bola">
+      <meta name="theme-color" content="#198ccd">
+      <meta name="msapplication-navbutton-color" content="#198ccd">
+      <meta name="apple-mobile-web-app-status-bar-style" content="#198ccd">
+      <link rel="manifest" href="manifest.json">
+      <link rel="shortcut icon" href="images/icons/favicon.ico">
+      <link rel="apple-touch-icon" href="images/icons/apple-touch-icon.png">
+      <link rel="apple-touch-icon" sizes="57x57" href="images/icons/apple-touch-icon-57x57.png">
+      <link rel="apple-touch-icon" sizes="72x72" href="images/icons/apple-touch-icon-72x72.png">
+      <link rel="apple-touch-icon" sizes="76x76" href="images/icons/apple-touch-icon-76x76.png">
+      <link rel="apple-touch-icon" sizes="114x114" href="images/icons/apple-touch-icon-114x114.png">
+      <link rel="apple-touch-icon" sizes="120x120" href="images/icons/apple-touch-icon-120x120.png">
+      <link rel="apple-touch-icon" sizes="144x144" href="images/icons/apple-touch-icon-144x144.png">
+      <link rel="apple-touch-icon" sizes="152x152" href="images/icons/apple-touch-icon-152x152.png">
+      <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon-180x180.png">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&family=Source+Sans+Pro&display=swap">
+      <title>El Futbol ID - Informasi Lengkap LaLiga</title>
+   </head>
+
+   <body>
+      
+      <header>
+
+         <div class="hide-on-small-only" id="desktop-header">         
+
+            <nav id="nav-top">
+               <div class="nav-wrapper container">
+                  <span>El Futbol ID X LaLiga</span>
+                  <ul class="right">
+                     <li><a class="link-button" href="#tentang" title="Tentang El Futbol ID">Tentang</a></li>
+                     <li><a class="link-button" href="#kontak" title="Kontak Kami">Kontak</a></li>
+                     <li><a class="link-button" id="favorite-btn" href="#favorit" title="Klub Favorit">Klub Favorit</a></li>
+                  </ul>
+               </div>
+            </nav>
+
+            <div class="container" id="logo-title">
+               <h1><a href="/" title="El Futbol ID"><img src="images/logo-horizontal.png" alt="El Futbol ID" title="El Futbol ID"></a></h1>
+            </div>
+
+            <nav class="container" id="nav-bottom">
+               <div class="nav-wrapper">
+                  <ul>
+                     <li><a class="link-button" href="#beranda" title="Beranda">Beranda</a></li>
+                     <li><a class="link-button" href="#klub" title="Daftar Klub">Daftar Klub</a></li>
+                     <li><a class="link-button" href="#pertandingan" title="Pertandingan">Pertandingan</a></li>
+                     <li><a class="link-button" href="#klasemen" title="Klasemen">Klasemen</a></li>
+                     <li><a class="link-button" href="#top-skor" title="Top Skor">Top Skor</a></li>
+                  </ul>
+               </div>
+            </nav>
+
+         </div>
+
+         <div class="hide-on-med-and-up" id="mobile-header"></div>
+
+      </header>
+
+      <main class="container row">
+         <div class="center-align loading-ajax">
+            <span><span></span>Memuat</span>
+         </div>
+      </main>
+
+      <footer class="page-footer hide-on-small-only">
+         <div class="container center-align valign-wrapper">
+            <img src="images/logo-horizontal-white.png" alt="El Futbol ID" title="El Futbol ID">
+            <span>X</span>
+            <img src="images/laliga-horizontal-white.png" alt="LaLiga" title="LaLiga">
+         </div>
+         <div class="footer-copyright">
+            <div class="container">
+               <span>Hak Cipta &copy; 2020</span>
+               <span class="right"><a href="/" title="El Futbol ID">El Futbol ID</a> - <a href="https://www.laliga.com/en-GB" title="LaLiga" target="_blank" rel="noopener">LaLiga</a></span>
+            </div>
+         </div>
+      </footer>
+
+      <div class="hide-on-med-and-up row" id="bottom-tabs">
+
+         <div class="col s4">
+            <button id="show-menu-list" title="Menu">
+               <i class="material-icons">apps</i>
+               <span>Menu</span>
+            </button>
+         </div>
+         <div class="col s4">
+            <a class="link-button" href="#beranda" title="Beranda">
+               <i class="material-icons">home</i>
+               <span>Beranda</span>
+            </a>
+         </div>
+         <div class="col s4">
+            <a class="link-button" href="#favorit" title="Klub Favorit">
+               <i class="material-icons">star</i>
+               <span>Favorit</span>
+            </a>
+         </div>
+         
+      </div>
+
+      <div class="hide-on-med-and-up row" id="menu-list">
+
+         <button id="close-menu-list" title="Tutup Menu"><i class="material-icons">close</i></button>
+
+         <div class="col s6">
+            <a class="link-button" href="#klub" title="Daftar Klub">
+               <i class="material-icons">format_list_bulleted</i>
+               <span>Daftar Klub</span>
+            </a>
+         </div>
+         <div class="col s6">
+            <a class="link-button" href="#pertandingan" title="Pertandingan">
+               <i class="material-icons">event_note</i>
+               <span>Pertandingan</span>
+            </a>
+         </div>
+         <div class="col s6">
+            <a class="link-button" href="#klasemen" title="Klasemen">
+               <i class="material-icons">format_list_numbered</i>
+               <span>Klasemen</span>
+            </a>
+         </div>
+         <div class="col s6">
+            <a class="link-button" href="#top-skor" title="Top Skor">
+               <i class="material-icons">star_border</i>
+               <span>Top Skor</span>
+            </a>
+         </div>
+         
+      </div>
+
+   </body>
+
+</html>
